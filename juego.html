@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mundo de Mascotas</title>
+        <link rel="stylesheet" type="text/css" href="css/juego.css">  
+        <link rel="stylesheet" type="text/css" href="css/modal-dialog.css">
+	</head>
+    <body>
+	    <header>
+	        <h1>Mundo de Mascotas</h1>
+	    </header>
+	    <nav>
+		    <ul>
+		       <li><a href="mascotas.html">Inicio</a></li>
+		       <li><a href="#">Juego</a></li>
+		    </ul>
+	    </nav>
+        <main>
+      		<section class="contenido">
+      			<button id="btnModal">Instrucciones</button>
+				<div id="tvesModal" class="modalContainer">
+					<div class="modal-content">
+						<span class="close">×</span>
+						<h2>Reglas del juego ahorcado</h2><br>
+						<p>El ahorcado solo sera de palabras alusivas a las mascotas</p><br>
+						<ul>
+							<li>Dar clic en una letra para adivinar la palabra secreta.</li>
+							<li>Si la letra está, entonces se le anota sobre la línea que ocupa su lugar en la palabra secreta.</li>
+							<li>Si la letra no está, entonces se dibujará una parte del muñeco.</li>
+							<li>Muñeco: El muñeco se dibuja en 6 partes (cabeza, tronco y extremidades), por lo que el adivinador tiene 6 posibilidades de fallar.</li>
+						</ul>
+					</div>
+				</div>
+		        <h1 class="titulo">Juego del ahorcado</h1>
+                <h1 id="msg-final"></h1>
+                <h3 id="acierto"></h3>
+        		<div class="flex-row no-wrap">
+        			<h2 class="palabra" id="palabra"></h2>
+		            <picture>
+		        		<img src="img/ahorcado_6.png" alt="" id="image6">
+		        		<img src="img/ahorcado_5.png" alt="" id="image5">
+		        		<img src="img/ahorcado_4.png" alt="" id="image4">
+		        		<img src="img/ahorcado_3.png" alt="" id="image3">
+		        		<img src="img/ahorcado_2.png" alt="" id="image2">
+		        		<img src="img/ahorcado_1.png" alt="" id="image1">
+		        		<img src="img/ahorcado_0.png" alt="" id="image0">
+		      		</picture>
+		        </div>
+        		<div class="flex-row" id="turnos">
+          			<div class="col">
+            			<h3>Intentos restantes: <span id="intentos">6</span></h3>
+          			</div>
+          			<div class="col">
+            			<button onclick="inicio()" id="reset">Elegir otra palabra</button>
+            			<button onclick="pista()" id="pista">Dame una pista!</button>
+            			<span id="hueco-pista"></span>
+          			</div>
+        		</div>	 
+        		<div class="flex-row">
+          			<div class="col">
+            			<div class="flex-row" id="abcdario"></div>
+          			</div>
+        		</div>
+      		</section>
+   		</main>
+	<footer>
+	  	<p>©Copyright 2020 Alumno. David Getzael Medina Vazquez</p>
+	</footer> 
+	<script src="js/juego.js"></script>
+	<script src="js/modal-dialog.js"></script>
+  </body>
+</html>
